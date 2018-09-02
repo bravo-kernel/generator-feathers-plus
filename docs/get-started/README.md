@@ -222,22 +222,22 @@ A sample favicon and HTML file are included.
         
     - **services/** will contain the services.
     
-    - **index.?s** is used by node to start the app.
+    - **index.js** is used by node to start the app.
         
-    - **app.?s** configures Feathers and Express.
+    - **app.js** configures Feathers and Express.
     
-    - **app.hooks.?s** contains hooks which are run for **all** services.
+    - **app.hooks.js** contains hooks which are run for **all** services.
     
-    - **channels.?s** contains the channels sending realtime events to clients.
+    - **channels.js** contains the channels sending realtime events to clients.
         
-    - **logger.?s** configures the [Winston](https://github.com/winstonjs/winston) logger.
+    - **logger.js** configures the [Winston](https://github.com/winstonjs/winston) logger.
     
     - **app.interface.ts** contains the global `App` interface needed to provide typed services.  
     
     - **typings.d.ts** contains declarations of modules that come without typings.
  
 - **test/** contains the tests for the app.
-app.test.?s tests that the index page appears, as well as 404 errors for HTML pages and JSON.
+app.test.js tests that the index page appears, as well as 404 errors for HTML pages and JSON.
 
 - **.editorconfig** is compatible with the [EditorConfig project](http://editorconfig.org/)
 and helps developers define and maintain consistent coding styles among different editors and IDEs.
@@ -606,20 +606,20 @@ Those models are located here.
     
 - **services/users** contains code for the users service.
 
-    - **users.service/?s** configures the service.
-    - **users.hooks.?s** identifies the hooks to be used with the service.
-    - **users.schema.?s** contains the database agnostic JSON-schema model for the service.
+    - **users.service.js** configures the service.
+    - **users.hooks.js** identifies the hooks to be used with the service.
+    - **users.schema.js** contains the database agnostic JSON-schema model for the service.
     When a service is initially created. the module contains an empty model as no model has yet
     been defined.
-    - **users.mongo.?s, users.mongoose.?s, users.sequelize.?s** contain the JSON-schema model
-    in users.schema.?s converted to a MongoDB, Mongoose or Sequelize model.
-    - **users.validate.?s** contains schemas to validate data for create, patch and update service calls.
+    - **users.mongo.js, users.mongoose.js, users.sequelize.js** contain the JSON-schema model
+    in users.schema.js converted to a MongoDB, Mongoose or Sequelize model.
+    - **users.validate.js** contains schemas to validate data for create, patch and update service calls.
     - **users.interface.ts** contains a TypeScript interface describing a single `user` entity.
     
-- **authentication.?s** contains the authentication code.
+- **authentication.js** contains the authentication code.
 
-- **mongoose.?s** configures the Mongoose adapter.
-knex.?s, mongodb.?s, rethinkdb.?s, sequelize.?s and sequelize-mssql.?s models would also be created as needed.
+- **mongoose.js** configures the Mongoose adapter.
+knex.js, mongodb.js, rethinkdb.js, sequelize.js and sequelize-mssql.js models would also be created as needed.
 
 - **test/service/users.test.?s** tests the service can be started. 
 
